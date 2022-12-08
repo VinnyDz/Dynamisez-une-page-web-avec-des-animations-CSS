@@ -1,0 +1,19 @@
+{
+  "name": "dynamisez-une-page-web-avec-des-animations-css_dzogolo_vinny",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./sass/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VinnyDz/Dynamisez-une-page-web-avec-des-animations-CSS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VinnyDz/Dynamisez-une-page-web-avec-des-animations-CSS/issues"
+  },
+  "homepage": "https://github.com/VinnyDz/Dynamisez-une-page-web-avec-des-animations-CSS#readme"
+}
