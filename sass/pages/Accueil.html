@@ -8,15 +8,18 @@
         <link rel="stylesheet" href="/sass/style.css">
         <script src="https://kit.fontawesome.com/c64b334860.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header class="header">
+        <header class="header container">
             <div class="header__heading">
                 <img src="/images/logo/ohmyfood.png" alt="Logo Ohmyfood">
             </div>
             <div class="header__location">
                 <i class="fa-solid fa-location-dot"></i>
-                <p>Paris, Belleville</p>
+                <h3>Paris, Belleville</p>
             </div>
             <div class="header__description">
                 <h1>Réservez le menu qui vous convient</h1>
@@ -26,25 +29,31 @@
                 </button>
             </div>
         </header>
-        <nav class="nav">
+        <nav class="nav container">
             <h1 class="nav__title">Fonctionnement</h1>
             <div class="nav__link">
-                <div>1</div>
+                <div class="nav__link--num">
+                    <p>1</p>
+                </div>
                 <i class="fa-solid fa-mobile-screen-button"></i>
                 <h2>Choissisez votre restaurant</h2>
             </div>
             <div class="nav__link">
-                <div>2</div>
+                <div class="nav__link--num">
+                    <p>2</p>
+                </div>
                 <i class="fa-solid fa-list-ul"></i>
                 <h2>Composez votre menu</h2>
             </div>
             <div class="nav__link">
-                <div>3</div>
+                <div class="nav__link--num">
+                    <p>3</p>
+                </div>
                 <i class="fa-solid fa-store"></i>
                 <p>Dégustez au restaurant</p>
             </div>
         </nav>
-        <main class="grid">
+        <main class="grid container">
             <h1 class="grid__title">Restaurants</h1>
             <div class="rest">
                 <div class="rest__img">
@@ -99,10 +108,8 @@
                 </div>
             </div>
         </main>
-        <footer class="footer">
-            <div class="footer__logo">
-                <img src="./Maquettes Ohmyfood/images/logo/ohmyfood.png" alt="Logo Ohmyfood">
-            </div>
+        <footer class="footer container">
+            <h2 class="footer__logo">Ohmyfood</h2>
             <div class="footer__field">
                 <i class="fa-solid fa-utensils"></i>
                 <p>Proposer un restaurant</p>
