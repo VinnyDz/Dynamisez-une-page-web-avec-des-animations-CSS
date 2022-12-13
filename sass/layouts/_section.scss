@@ -1,0 +1,39 @@
+.grid {
+   // width: 100%;
+   display: flex;
+   flex-direction: column;
+   &__title {
+
+   }
+}
+.rest {
+   display: flex;
+   // gap: 2%;
+   column-gap: 2%;
+   row-gap: 2%;
+   flex-wrap: wrap;
+}
+.card {
+   display: flex;
+   flex-direction: column;
+   width: 49%;
+   height: 300px;
+   margin-bottom: 20px;
+   &__img {
+      width: 100%;
+      height: 70%;
+      & img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+   &__description {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px 0 15px;
+      height: 30%;
+      &--text {
+         font-size: 10px;
+      }
+   }
+}
