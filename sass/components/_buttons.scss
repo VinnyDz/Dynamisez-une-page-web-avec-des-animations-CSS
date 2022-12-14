@@ -1,0 +1,6 @@
+.btn {
+    @include btn;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}

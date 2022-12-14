@@ -1,6 +1,10 @@
 nav {
     display: flex;
     flex-direction: column;
+    padding-bottom: 5rem;
+    & h1 {
+        @include size-title
+    }
 }
 .navigation {
     display: flex;
@@ -26,8 +30,8 @@ nav {
             @include flexbox-center;
             justify-content: flex-start;
             width: 90%;
-            height: 67px;
-            border: solid black;
+            height: 5rem;
+            // border: solid black;
             border-radius: 1.25rem;
             box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
             
@@ -39,6 +43,7 @@ nav {
                 margin:0; 
                 text-align: center;
                 text-justify: center;
+                font-weight: 550;
                 font-size: 1.2rem;
                 margin-left: 1rem;
             }

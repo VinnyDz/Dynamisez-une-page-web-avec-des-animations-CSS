@@ -5,5 +5,8 @@ $white: #fff;
 
 $background-location: darken(#fff,10%);
 $background-grey: darken(#fff,5%);
+$nouveau-color: darken($colour-tertiary,30%);
+
+$degrade: linear-gradient(0deg,$colour-primary,$colour-secondary);
 
 $footer-colour: #353535;
