@@ -24,6 +24,8 @@
         }
     }
     &__description{
+        @include flexbox-center;
+        flex-direction: column;
         width: 100%;
         background-color: $background-grey;
         align-items: center;
@@ -40,5 +42,17 @@
             margin: 0 0 32px 0;
             
         }
+    }
+    &__img {
+        width: 100%;
+        height: 30rem;
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__name {
+        font-family: 'Shrikhand';
+        @include size-title;
     }
 }

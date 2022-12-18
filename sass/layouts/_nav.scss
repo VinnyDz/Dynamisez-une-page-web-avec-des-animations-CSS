@@ -9,11 +9,15 @@ nav {
 .navigation {
     display: flex;
     &__link {
-        display: flex;
+        // display: flex;
         flex-direction: row;
         align-items: center;
         width: calc(100%/3);
+        position: relative;
         &--num {
+            position: absolute;
+            right: 24.7rem;
+            top: 2rem;
             color: $white;
             background-color: $colour-primary;
             width: 30px;
@@ -34,7 +38,6 @@ nav {
             // border: solid black;
             border-radius: 1.25rem;
             box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
-            
             & i {
                 margin-left: 1rem;
                 color: gray;
@@ -47,6 +50,10 @@ nav {
                 font-size: 1.2rem;
                 margin-left: 1rem;
             }
+            &:hover {
+                cursor: pointer;
+                background-color: $lighten-secondary;
+            } 
         }    
     }
 }

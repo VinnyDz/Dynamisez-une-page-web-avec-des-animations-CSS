@@ -68,10 +68,63 @@
             @include size-card;
          }
       }
-      & i {
+      &--heart {
          cursor: pointer;
-         margin-left: 1rem;
-         color: $degrade;
-     }
+         & i {
+            margin-left: 1rem;
+        }
+        & span i {
+         display: none;
+         color: $colour-secondary;
+        }
+        &:hover {
+         i {
+            display: none;
+         }
+         span i {
+            display: inline;
+         }
+        }
+      }
+   }
+}
+.main {
+   display: flex;
+   flex-direction: column;
+}
+.menu {
+   display: flex;
+   flex-direction: column;
+   & h2 {
+      @include size-card;
+   }
+}
+.submenu {
+   display: flex;
+   gap: 5%;
+   &__opt {
+      display: flex;
+      justify-content: space-between;
+      @include size-card;
+      width: 40%;
+      padding: 1rem;
+      border-radius: 1rem;
+      border: solid;
+      &--name {
+         display: flex;
+         flex-direction: column;
+         & h3 {
+            margin: 0;
+         }
+         & p {
+            margin: 0;
+         }
+      }
+      &--price {
+         margin: 0;
+         display: flex;
+         align-items: flex-end;
+      }
+
    }
 }
