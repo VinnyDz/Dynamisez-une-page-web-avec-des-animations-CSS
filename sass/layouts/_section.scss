@@ -91,17 +91,26 @@
 .main {
    display: flex;
    flex-direction: column;
+   background-color: $background-grey;
+   // position: absolute;
 }
 .menu {
    display: flex;
    flex-direction: column;
+   padding-bottom: 2rem;
    & h2 {
       @include size-card;
+   }
+   &__underline {
+      background-color: $colour-tertiary;
+      width: 3.5rem;
+      height: 0.25rem;
    }
 }
 .submenu {
    display: flex;
    gap: 5%;
+   margin-top: 1.5rem;
    &__opt {
       display: flex;
       justify-content: space-between;
@@ -109,7 +118,9 @@
       width: 40%;
       padding: 1rem;
       border-radius: 1rem;
-      border: solid;
+      background-color: $white;
+      box-shadow: 2px 2px 2px lightgrey;
+      // border: solid;
       &--name {
          display: flex;
          flex-direction: column;
