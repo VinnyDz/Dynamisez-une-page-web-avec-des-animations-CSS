@@ -78,6 +78,24 @@
             @include size-title;
             margin: 0;
         }
-
+        &--heart {
+            position: relative;
+            cursor: pointer;
+         & i {
+            margin-left: 1rem;
+        }
+        & span i {
+         display: none;
+         color: $colour-secondary;
+        }
+        &:hover {
+         i {
+            display: none;
+         }
+         span i {
+            display: inline;
+         }
+        }
+        }
     }
 }

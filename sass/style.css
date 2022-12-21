@@ -116,6 +116,23 @@ body {
   font-weight: 750;
   margin: 0;
 }
+.header__name--heart {
+  position: relative;
+  cursor: pointer;
+}
+.header__name--heart i {
+  margin-left: 1rem;
+}
+.header__name--heart span i {
+  display: none;
+  color: #FF79DA;
+}
+.header__name--heart:hover i {
+  display: none;
+}
+.header__name--heart:hover span i {
+  display: inline;
+}
 
 nav {
   display: flex;
@@ -129,17 +146,20 @@ nav h1 {
 
 .navigation {
   display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 .navigation__link {
-  flex-direction: row;
   align-items: center;
   width: 33.3333333333%;
+  padding-bottom: 1rem;
   position: relative;
+  height: 80px;
 }
 .navigation__link--num {
   position: absolute;
-  right: 32.5rem;
-  top: 2rem;
+  left: -15px;
+  top: 25px;
   color: #fff;
   background-color: #9356DC;
   width: 30px;
@@ -179,6 +199,11 @@ nav h1 {
   background-color: ligthen #99E2D0, 30%;
 }
 
+@media (max-width: 1185px) {
+  .navigation__link {
+    width: 100%;
+  }
+}
 .grid {
   display: flex;
   flex-direction: column;
@@ -192,10 +217,11 @@ nav h1 {
 
 .rest {
   display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   -moz-column-gap: 2%;
        column-gap: 2%;
   row-gap: 2%;
-  flex-wrap: wrap;
 }
 
 .card {
@@ -260,13 +286,17 @@ nav h1 {
 }
 .card__description--heart span i {
   display: none;
-  color: #FF79DA;
+  background: transparent;
+  transition: background 2s;
 }
 .card__description--heart:hover i {
   display: none;
 }
 .card__description--heart:hover span i {
   display: inline;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main {
@@ -292,6 +322,7 @@ nav h1 {
 
 .submenu {
   display: flex;
+  display: inline-flex;
   gap: 5%;
   margin-top: 1.5rem;
 }
@@ -322,6 +353,25 @@ nav h1 {
   align-items: flex-end;
 }
 
+.commander {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .submenu {
+    flex-wrap: wrap;
+  }
+  .submenu__opt {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
 .footer {
   background: #353535;
   padding-right: 40px;

@@ -10,10 +10,10 @@
 }
 .rest {
    display: flex;
-   // gap: 2%;
+    display: inline-flex;
+    flex-wrap: wrap;
    column-gap: 2%;
    row-gap: 2%;
-   flex-wrap: wrap;
 }
 .card {
    display: flex;
@@ -70,19 +70,24 @@
       }
       &--heart {
          cursor: pointer;
+         
          & i {
             margin-left: 1rem;
         }
         & span i {
          display: none;
-         color: $colour-secondary;
+         background: transparent;
+         transition: background 2s;
         }
         &:hover {
          i {
             display: none;
          }
-         span i {
+         span i{
             display: inline;
+            background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
+	         -webkit-background-clip: text;
+	         -webkit-text-fill-color: transparent;
          }
         }
       }
@@ -109,6 +114,7 @@
 }
 .submenu {
    display: flex;
+   display: inline-flex;
    gap: 5%;
    margin-top: 1.5rem;
    &__opt {
@@ -138,4 +144,22 @@
       }
 
    }
+}
+.commander {
+   display: flex;
+   justify-content: center;
+}
+@media (max-width: 768px) {
+   .card {
+      width: 100%;
+   }
+}
+@media (max-width: 1200px) {
+   .submenu {
+      flex-wrap: wrap;
+      &__opt{
+         width: 100%;
+         margin-bottom: 2rem;
+      }
+   }   
 }

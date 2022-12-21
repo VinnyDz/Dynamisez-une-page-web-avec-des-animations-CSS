@@ -8,16 +8,21 @@ nav {
 }
 .navigation {
     display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
     &__link {
         // display: flex;
-        flex-direction: row;
+        
+        // flex-direction: row;
         align-items: center;
         width: calc(100%/3);
+        padding-bottom: 1rem;
         position: relative;
+        height: 80px;
         &--num {
             position: absolute;
-            right: 32.5rem;
-            top: 2rem;
+            left: -15px;
+            top: 25px;
             color: $white;
             background-color: $colour-primary;
             width: 30px;
@@ -54,6 +59,14 @@ nav {
                 cursor: pointer;
                 background-color: $lighten-secondary;
             } 
-        }    
+        }     
+    }     
+
+}   
+@media (max-width: 1185px) {
+    .navigation {
+        &__link {
+            width: 100%;
+        }
     }
 }
