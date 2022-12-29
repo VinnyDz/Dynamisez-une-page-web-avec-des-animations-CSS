@@ -69,22 +69,34 @@
          }
       }
       &--heart {
+         width: 32px;
+         height: 32.7px;
          cursor: pointer;
-         
+         position: relative;
          & i {
-            margin-left: 1rem;
+            // margin-left: 1rem;
+            display: inline;
+            opacity: 1;
+            transition: opacity .5s;
+            
         }
         & span i {
-         display: none;
-         background: transparent;
-         transition: background 2s;
+         left: 0;
+         top: 10px;
+         position: absolute;
+         display: inline;
+         background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
+	      -webkit-background-clip: text;
+	      -webkit-text-fill-color: transparent;
+         opacity: -1;
+         transition: opacity .5s;
         }
         &:hover {
          i {
-            display: none;
+            opacity: -1; 
          }
-         span i{
-            display: inline;
+         span i {
+            opacity: 1;
             background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
 	         -webkit-background-clip: text;
 	         -webkit-text-fill-color: transparent;
