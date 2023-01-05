@@ -129,30 +129,61 @@
    display: inline-flex;
    gap: 5%;
    margin-top: 1.5rem;
+   cursor: pointer;
    &__opt {
       display: flex;
       justify-content: space-between;
+      overflow: hidden;
       @include size-card;
       width: 40%;
-      padding: 1rem;
       border-radius: 1rem;
       background-color: $white;
       box-shadow: 2px 2px 2px lightgrey;
+      animation: slide-top 1.5s ease-in-out;
       // border: solid;
+      &--left {
+         display: flex;
+         flex-direction: row;
+         padding: 1rem;
+         width: calc(100% - 130px);
+      }
       &--name {
          display: flex;
          flex-direction: column;
          & h3 {
             margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
          }
          & p {
             margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
          }
       }
       &--price {
          margin: 0;
          display: flex;
          align-items: flex-end;
+      }
+      &--check {
+         display: flex;
+         background-color: $colour-tertiary;
+         width: 130px;
+         align-items: center;
+         justify-content: center;
+         color: white;
+         margin-left: 130px;
+         
+      }
+      &:hover {
+         .slide-left{
+            animation: slide-left 2s forwards;
+            // margin-left: 0;
+            animation-direction: alternate;
+         }
       }
 
    }
