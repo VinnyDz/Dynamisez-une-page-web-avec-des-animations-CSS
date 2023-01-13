@@ -78,7 +78,7 @@
             display: inline;
             opacity: 1;
             transition: opacity .5s;
-            
+
         }
         & span i {
          left: 0;
@@ -93,7 +93,7 @@
         }
         &:hover {
          i {
-            opacity: -1; 
+            opacity: -1;
          }
          span i {
             opacity: 1;
@@ -130,23 +130,23 @@
    gap: 5%;
    margin-top: 1.5rem;
    cursor: pointer;
-   &__opt {
+}
+.opt {
+   display: flex;
+   justify-content: space-between;
+   overflow: hidden;
+   @include size-card;
+   width: 40%;
+   border-radius: 1rem;
+   background-color: $white;
+   box-shadow: 2px 2px 2px lightgrey;
+   animation: slide-top 1.5s ease-in-out;
+   // border: solid;
+   &__left {
       display: flex;
-      justify-content: space-between;
-      overflow: hidden;
-      @include size-card;
-      width: 40%;
-      border-radius: 1rem;
-      background-color: $white;
-      box-shadow: 2px 2px 2px lightgrey;
-      animation: slide-top 1.5s ease-in-out;
-      // border: solid;
-      &--left {
-         display: flex;
-         flex-direction: row;
-         padding: 1rem;
-         width: calc(100% - 130px);
-      }
+      flex-direction: row;
+      padding: 1rem;
+      width: calc(100% - 130px);
       &--name {
          display: flex;
          flex-direction: column;
@@ -168,26 +168,36 @@
          display: flex;
          align-items: flex-end;
       }
-      &--check {
-         display: flex;
-         background-color: $colour-tertiary;
-         width: 130px;
-         align-items: center;
-         justify-content: center;
-         color: white;
-         margin-left: 130px;
-         
-      }
-      &:hover {
-         .slide-left{
-            animation: slide-left 2s forwards;
-            // margin-left: 0;
+   }
+   &__check {
+      display: flex;
+      background-color: $colour-tertiary;
+      width: 130px;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      margin-left: 130px;
+   }
+   &:hover {
+      .opt__check {
+         animation: slide-left 0.5s forwards;
+         margin-left: 0;
+         animation-direction: alternate;
+         & i {
+            animation: rotation 0.5s forwards;
             animation-direction: alternate;
          }
       }
-
+   }
+   &:not(:hover) {
+      .opt__check {
+         animation: slide-right 0.5s forwards;
+         margin-left: 0px;
+         animation-direction: alternate;
+      }
    }
 }
+
 .commander {
    display: flex;
    justify-content: center;
@@ -200,9 +210,9 @@
 @media (max-width: 1200px) {
    .submenu {
       flex-wrap: wrap;
-      &__opt{
-         width: 100%;
-         margin-bottom: 2rem;
-      }
-   }   
+   }
+   .opt{
+      width: 100%;
+      margin-bottom: 2rem;
+   }
 }
