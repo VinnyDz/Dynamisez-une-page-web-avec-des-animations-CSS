@@ -1,3 +1,9 @@
+a {
+   width: 100%;
+   height: 100%;
+   text-decoration: none;
+   color: #333333;
+}
 .grid {
    // width: 100%;
    display: flex;
@@ -127,7 +133,8 @@
 .submenu {
    display: flex;
    display: inline-flex;
-   gap: 5%;
+   flex-wrap: wrap;
+   gap: 10px;
    margin-top: 1.5rem;
    cursor: pointer;
 }
@@ -136,7 +143,7 @@
    justify-content: space-between;
    overflow: hidden;
    @include size-card;
-   width: 40%;
+   width: calc(90%/3);
    border-radius: 1rem;
    background-color: $white;
    box-shadow: 2px 2px 2px lightgrey;
@@ -145,28 +152,35 @@
    &__left {
       display: flex;
       flex-direction: row;
-      padding: 1rem;
-      width: calc(100% - 130px);
+      padding: 1rem 0 1rem 1rem;
+      width: 100%;
       &--name {
+         width: 100%;
          display: flex;
          flex-direction: column;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         overflow: hidden;
          & h3 {
             margin: 0;
+            text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
          }
          & p {
             margin: 0;
+            text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
          }
       }
       &--price {
          margin: 0;
+         width: 20%;
          display: flex;
          align-items: flex-end;
+         white-space: nowrap;
+         overflow: hidden;
       }
    }
    &__check {
@@ -176,10 +190,12 @@
       align-items: center;
       justify-content: center;
       color: white;
-      margin-left: 130px;
+      // display: none;
+      // margin-left: 130px;
    }
    &:hover {
       .opt__check {
+         // display: inline-flex;
          animation: slide-left 0.5s forwards;
          margin-left: 0;
          animation-direction: alternate;
@@ -187,6 +203,9 @@
             animation: rotation 0.5s forwards;
             animation-direction: alternate;
          }
+      }
+      .opt__left {
+         width: calc(100% - 130px);
       }
    }
    &:not(:hover) {
@@ -202,14 +221,24 @@
    display: flex;
    justify-content: center;
 }
+@media (max-width: 1200px) {
+   .submenu {
+      flex-wrap: wrap;
+   }
+   .opt{
+      width: 45%;
+      margin-bottom: 2rem;
+   }
+}
 @media (max-width: 768px) {
    .card {
       width: 100%;
    }
+
 }
-@media (max-width: 1200px) {
-   .submenu {
-      flex-wrap: wrap;
+@media (max-width: 603px) {
+   .card {
+      width: 100%;
    }
    .opt{
       width: 100%;

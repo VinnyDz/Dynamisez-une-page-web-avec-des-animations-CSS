@@ -4,4 +4,8 @@
     align-items: center;
     align-content: center;
     margin-bottom: 3rem;
+    & :hover {
+        background-image: none;
+        background-color: aqua;
+    }
 }

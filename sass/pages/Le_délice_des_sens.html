@@ -4,31 +4,181 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ohmyfood</title>
-        <link rel="stylesheet" href="CSS/style.css">
+        <title>la delice des sens</title>
+        <link rel="stylesheet" href="/sass/style.css">
         <script src="https://kit.fontawesome.com/c64b334860.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     </head>
     <body>
-        
-        <footer>
-            <div>
-                <img src="./Maquettes Ohmyfood/images/logo/ohmyfood.png" alt="Logo Ohmyfood">
+        <header class="header">
+            <div class="header__heading">
+                <img src="/images/logo/ohmyfood.png" alt="Logo Ohmyfood">
+                <a href="./Accueil.html"><i class="fa-sharp fa-solid fa-arrow-left"></i></a>
             </div>
-            <div>
-                <div>
-                    <i class="fa-solid fa-utensils"></i>
+            <div class="header__img">
+                <img src="/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Àla française">
+            </div>
+            <div class="header__name">
+                <h3>Le délice des sens</h3>
+                <div class="header__name--heart">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
                 </div>
+            </div>
+        </header>
+        <section class="main container">
+            <div class="menu">
+                <h2>ENTRÉES</h2>
+                <div class="menu__underline"></div>
+                <div class="submenu">
+                    <div class="opt">
+                        <div class="opt__left">
+                            <div class="opt__left--name">
+                                <h3>Tartare de thon</h3>
+                                <p>Assaisonné au yuzu</p>
+                            </div>
+                            <span class="opt__left--price">25€</span>
+                        </div>
+                        <div class="opt__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                    <div class="opt">
+                        <div class="opt__left">
+                            <div class="opt__left--name">
+                                <h3>Bouchée de homard croustillant</h3>
+                                <p>Et sa farandole de petits légumes</p>
+                            </div>
+                            <span class="opt__left--price">35€</span>
+                        </div>
+                        <div class="opt__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                    <div class="opt">
+                        <div class="opt__left">
+                            <div class="opt__left--name">
+                                <h3>Velouté de cèpes</h3>
+                                <p>Aux truffes</p>
+                            </div>
+                            <span class="opt__left--price">20€</span>
+                        </div>
+                        <div class="opt__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <h2>PLATS</h2>
+                <div class="menu__underline"></div>
+                <div class="submenu">
+                    <div class="opt">
+                        <div class="opt__left">
+                            <div class="opt__left--name">
+                                <h3>Poulet rôti aux herbes de Provence</h3>
+                                <p>Et sa crème de truffe</p>
+                            </div>
+                            <span class="opt__left--price">40€</span>
+                        </div>
+                        <div class="opt__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                    <div class="opt">
+                        <div class="opt__left">
+                            <div class="opt__left--name">
+                                <h3>Langouste rôtie </h3>
+                                <p>Et ses légumes de saison</p>
+                            </div>
+                            <span class="opt__left--price">35€</span>
+                        </div>
+                        <div class="opt__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                    <div class="opt">
+                        <div class="opt__left">
+                            <div class="opt__left--name">
+                                <h3>Côte de boeuf Angus</h3>
+                                <p>Et sa purée de panais</p>
+                            </div>
+                            <span class="opt__left--price">44€</span>
+                        </div>
+                        <div class="opt__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <h2>DESSERTS</h2>
+                <div class="menu__underline"></div>
+                <div class="submenu">
+                    <div class="opt">
+                        <div class="opt__left">
+                            <div class="opt__left--name">
+                                <h3>Farandole de desserts</h3>
+                                <p>Du chef</p>
+                            </div>
+                            <span class="opt__left--price">18€</span>
+                        </div>
+                        <div class="opt__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                    <div class="opt">
+                        <div class="opt__left">
+                            <div class="opt__left--name">
+                                <h3>Crème brulée</h3>
+                                <p>Revisitée</p>
+                            </div>
+                            <span class="opt__left--price">22€</span>
+                        </div>
+                        <div class="opt__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                    <div class="opt">
+                        <div class="opt__left">
+                            <div class="opt__left--name">
+                                <h3>Tiramisu</h3>
+                                <p>À la noisette</p>
+                            </div>
+                            <span class="opt__left--price">23€</span>
+                        </div>
+                        <div class="opt__check">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="commander">
+                <button class="btn">
+                    Commander
+                </button>
+            </div>
+        </section>
+        <footer class="footer">
+            <h2 class="footer__logo">Ohmyfood</h2>
+            <div class="footer__field">
+                <i class="fa-solid fa-utensils"></i>
                 <p>Proposer un restaurant</p>
             </div>
-            <div>
-                <div>
-                    <i class="fa-solid fa-handshake-angle"></i>
-                </div>
+            <div class="footer__field">
+                <i class="fa-solid fa-handshake-angle"></i>
                 <p>Devenir un partenaire</p>
             </div>
-            <p>Mentions légales</p>
-            <p>Contact</p>
+            <div class="footer__field">
+                <p>Mentions légales</p>
+            </div>
+            <div class="footer__field">
+                <p>Contact</p>
+            </div>
         </footer>
     </body>
 </html>
