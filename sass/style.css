@@ -124,19 +124,19 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  position: relative;
 }
-.header__heading {
+.header__logo {
   display: flex;
   align-content: center;
   justify-content: center;
   margin: 10px 0 10px 0;
-  width: 100%;
 }
-.header__heading a {
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
+.header__heading {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin: 10px 0 10px 0;
+  width: 100%;
 }
 .header__location {
   display: flex;
@@ -311,10 +311,19 @@ nav h1 {
   }
 }
 a {
+  text-decoration: none;
+  color: #333333;
+}
+
+a {
   width: 100%;
   height: 100%;
   text-decoration: none;
   color: #333333;
+}
+
+.previous {
+  width: auto;
 }
 
 .grid {
@@ -469,7 +478,7 @@ a {
 .opt__left {
   display: flex;
   flex-direction: row;
-  padding: 1rem 0 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   width: 100%;
 }
 .opt__left--name {
@@ -504,17 +513,19 @@ a {
 .opt__check {
   display: flex;
   background-color: #99E2D0;
-  width: 130px;
+  width: 0px;
   align-items: center;
   justify-content: center;
   color: white;
 }
 .opt:hover .opt__check {
+  display: inline-flex;
   -webkit-animation: slide-left 0.5s forwards;
           animation: slide-left 0.5s forwards;
   margin-left: 0;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+  width: 130px;
 }
 .opt:hover .opt__check i {
   -webkit-animation: rotation 0.5s forwards;
@@ -522,15 +533,13 @@ a {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
-.opt:hover .opt__left {
-  width: calc(100% - 130px);
-}
 .opt:not(:hover) .opt__check {
   -webkit-animation: slide-right 0.5s forwards;
           animation: slide-right 0.5s forwards;
   margin-left: 0px;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+  display: inline-flex;
 }
 
 .commander {

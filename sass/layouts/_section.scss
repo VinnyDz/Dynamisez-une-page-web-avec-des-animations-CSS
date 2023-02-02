@@ -1,8 +1,15 @@
 a {
+   text-decoration: none;
+   color: #333333;
+}
+a {
    width: 100%;
    height: 100%;
    text-decoration: none;
    color: #333333;
+}
+.previous {
+   width: auto;
 }
 .grid {
    // width: 100%;
@@ -152,7 +159,7 @@ a {
    &__left {
       display: flex;
       flex-direction: row;
-      padding: 1rem 0 1rem 1rem;
+      padding: 1rem 1rem 1rem 1rem;
       width: 100%;
       &--name {
          width: 100%;
@@ -187,26 +194,28 @@ a {
    &__check {
       display: flex;
       background-color: $colour-tertiary;
-      width: 130px;
+      width: 0px;
       align-items: center;
       justify-content: center;
       color: white;
+      // left: 130px;
       // display: none;
       // margin-left: 130px;
    }
    &:hover {
       .opt__check {
-         // display: inline-flex;
+         display: inline-flex;
          animation: slide-left 0.5s forwards;
          margin-left: 0;
          animation-direction: alternate;
+         width: 130px;
          & i {
             animation: rotation 0.5s forwards;
             animation-direction: alternate;
          }
       }
       .opt__left {
-         width: calc(100% - 130px);
+         // width: calc(100% - 130px);
       }
    }
    &:not(:hover) {
@@ -214,6 +223,7 @@ a {
          animation: slide-right 0.5s forwards;
          margin-left: 0px;
          animation-direction: alternate;
+         display: inline-flex;
       }
    }
 }
