@@ -6,4 +6,37 @@
     padding-left: 40px;
     // max-width: 1366px;
 }
+.loading-spinner {
+    position: fixed;
+    background-color: #ffff;
+    height: 100vh;
+    width: 100vw;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    // transition: opacity 1s ease-in-out;
+    animation: disappear 2s forwards ;
     
+}
+.dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: #000;
+    margin: 0 15px;
+    animation: loader infinite 0.3s alternate;
+}
+.d1 {
+    background: $colour-primary;
+}
+.d2 {
+    animation-delay: 0.05s;
+    background: $colour-secondary;
+}
+.d3 {
+    animation-delay: 0.1s;
+    background: $colour-tertiary;
+}
