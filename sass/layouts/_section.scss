@@ -147,8 +147,8 @@ a {
 }
 .opt {
    display: flex;
-   justify-content: space-between;
    overflow: hidden;
+   padding: 0;
    @include size-card;
    width: calc(90%/3);
    border-radius: 1rem;
@@ -159,31 +159,38 @@ a {
    &__left {
       display: flex;
       flex-direction: row;
-      padding: 1rem 1rem 1rem 1rem;
+      justify-content: space-between;
+      padding: 0rem 0 0rem 1rem;
       width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
       &--name {
-         width: 100%;
+         width: 85%;
          display: flex;
          flex-direction: column;
          text-overflow: ellipsis;
          white-space: nowrap;
          overflow: hidden;
+         padding: 0;
          & h3 {
             margin: 0;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+            padding: 0;
          }
          & p {
             margin: 0;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+            padding: 0;
          }
       }
       &--price {
-         margin: 0;
+         // margin: 1rem 1rem 0 1rem;
          width: 20%;
+         padding: 0;
          display: flex;
          align-items: flex-end;
          justify-content: flex-end;
@@ -194,36 +201,39 @@ a {
    &__check {
       display: flex;
       background-color: $colour-tertiary;
-      width: 0px;
+      // width: 0px;
       align-items: center;
       justify-content: center;
       color: white;
+      margin: 0;
+      padding: 0;
       // left: 130px;
       // display: none;
       // margin-left: 130px;
    }
    &:hover {
       .opt__check {
-         display: inline-flex;
+         // display: inline-flex;
          animation: slide-left 0.5s forwards;
-         margin-left: 0;
+         margin-left: 1rem;
          animation-direction: alternate;
-         width: 130px;
+         width: 50px;
          & i {
             animation: rotation 0.5s forwards;
             animation-direction: alternate;
          }
       }
       .opt__left {
-         // width: calc(100% - 130px);
+         // width: calc(100% - 70px);
       }
    }
    &:not(:hover) {
       .opt__check {
          animation: slide-right 0.5s forwards;
-         margin-left: 0px;
+         // width: 50px;
+         // margin-left: 0px;
          animation-direction: alternate;
-         display: inline-flex;
+         // display: inline-flex;
       }
    }
 }
