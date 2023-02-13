@@ -112,12 +112,24 @@ body {
     align-content: center;
     justify-content: center;
     margin: 10px 0 10px 0; }
+    .header__logo img {
+      width: 80%; }
   .header__heading {
     display: flex;
     align-content: center;
     justify-content: space-between;
     margin: 10px 0 10px 0;
     width: 100%; }
+    .header__heading--previous {
+      width: 5%; }
+    .header__heading--logo {
+      width: 90%;
+      display: flex;
+      align-content: center;
+      justify-content: center; }
+      .header__heading--logo img {
+        overflow: hidden;
+        object-fit: cover; }
   .header__location {
     display: flex;
     align-items: center;
