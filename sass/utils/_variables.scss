@@ -12,3 +12,4 @@ $lighten-tertiary: lighten($colour-tertiary,30%);
 $degrade: linear-gradient(to right,$colour-secondary,$colour-primary);
 $lighten-degrade: linear-gradient(to right,$lighten-secondary,$lighten-primary);
 $footer-colour: #353535;
+$background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));

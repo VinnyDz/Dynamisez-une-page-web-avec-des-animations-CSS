@@ -83,11 +83,12 @@ a {
       }
       &--heart {
          width: 32px;
-         height: 32.7px;
+         height: 32px;
          cursor: pointer;
          position: relative;
          & i {
             // margin-left: 1rem;
+            position: absolute;
             display: inline;
             opacity: 1;
             transition: opacity .5s;
@@ -95,27 +96,74 @@ a {
         }
         & span i {
          left: 0;
-         top: 10px;
+         // top: 9.5px;
          position: absolute;
          display: inline;
-         background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
+         background-image: linear-gradient(transparent 50%, transparent 50%, $colour-primary 50%, $colour-secondary);
+         background-size: 100% 200%;
+         background-position: top;
+         transition: background-position 0.5s ease-in-out;
+         // background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
 	      -webkit-background-clip: text;
 	      -webkit-text-fill-color: transparent;
-         opacity: -1;
-         transition: opacity .5s;
+         // opacity: -1;
+         transition: .5s ease-out;
         }
         &:hover {
          i {
-            opacity: -1;
+            // opacity: -1;
          }
          span i {
-            opacity: 1;
-            background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
-	         -webkit-background-clip: text;
-	         -webkit-text-fill-color: transparent;
+            // opacity: 1;
+            // height: 100%;
+            background-position: bottom;
          }
         }
       }
+      // &--heart {
+      //    width: 32px;
+      //    height: 32.7px;
+      //    display: flex;
+      //    cursor: pointer;
+      //    position: relative;
+      //    overflow: hidden;
+      //    & i {
+      //       // margin-left: 1rem;
+      //       display: inline;
+      //       opacity: 1;
+      //       color: white;
+      //       border-radius: 1rem solid black;
+      //       // transition: opacity .5s;
+
+      //   }
+      //   & span i {
+      //    left: 0;
+      //    // top: 10px;
+      //    bottom: -30px;
+      //    position: absolute;
+      //    display: inline;
+      //    background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
+	   //    -webkit-background-clip: text;
+	   //    -webkit-text-fill-color: transparent;
+      //    // opacity: -1;
+      //    // transition: opacity .5s;
+      //   }
+      //   &:hover {
+      //    i {
+      //       // opacity: -1;
+      //       animation: remplir 3s forwards;
+      //    }
+      //    // span i {
+      //    //    // opacity: 1;
+            
+      //    //    animation: fill 1s forwards;
+      //    //    bottom: -10px;
+      //    //    // background: -webkit-gradient(linear, left top, left bottom, from($colour-primary), to($colour-secondary));
+	   //    //    // -webkit-background-clip: text;
+	   //    //    // -webkit-text-fill-color: transparent;
+      //    // }
+      //   }
+      // }
    }
 }
 .main {

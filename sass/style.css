@@ -174,6 +174,7 @@ body {
     padding-bottom: 1rem;
     background-color: #f2f2f2; }
     .header__img img {
+      object-fit: cover;
       width: 100%;
       height: 100%; }
   .header__name {
@@ -247,8 +248,7 @@ nav {
       .navigation__link--num p {
         margin: 0;
         font-size: 1rem;
-        text-align: center;
-        text-justify: center; }
+        text-align: center; }
     .navigation__link--bloc {
       display: flex;
       align-items: center;
@@ -264,7 +264,6 @@ nav {
       .navigation__link--bloc h2 {
         margin: 0;
         text-align: center;
-        text-justify: center;
         font-weight: 550;
         font-size: 1.2rem;
         margin-left: 1rem; }
@@ -351,30 +350,27 @@ a {
         margin: 0; }
     .card__description--heart {
       width: 32px;
-      height: 32.7px;
+      height: 32px;
       cursor: pointer;
       position: relative; }
       .card__description--heart i {
+        position: absolute;
         display: inline;
         opacity: 1;
         transition: opacity .5s; }
       .card__description--heart span i {
         left: 0;
-        top: 10px;
         position: absolute;
         display: inline;
-        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+        background-image: linear-gradient(transparent 50%, transparent 50%, #9356DC 50%, #FF79DA);
+        background-size: 100% 200%;
+        background-position: top;
+        transition: background-position 0.5s ease-in-out;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        opacity: -1;
-        transition: opacity .5s; }
-      .card__description--heart:hover i {
-        opacity: -1; }
+        transition: .5s ease-out; }
       .card__description--heart:hover span i {
-        opacity: 1;
-        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; }
+        background-position: bottom; }
 
 .main {
   display: flex;
@@ -501,8 +497,7 @@ a {
   .footer__field {
     display: flex;
     align-items: center;
-    color: #fff;
-    size: 1rem; }
+    color: #fff; }
     .footer__field i {
       width: 1rem;
       margin: 0 30px 0 0; }
